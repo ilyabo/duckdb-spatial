@@ -45,7 +45,7 @@ COPY (
 	SELECT st_asmvt(
 		{"geom": ST_AsMVTGeom(
 			geom,
-			ST_MakeEnvelope(0, 0, 1000, 1000),
+			ST_MakeEnvelope(0, 0, 1000, 1000)::BOX_2D,
 			4096,
 			256,
 			true
@@ -69,7 +69,7 @@ COPY (
 	SELECT st_asmvt(
 		{"geom": ST_AsMVTGeom(
 			geom,
-			ST_MakeEnvelope(0, 0, 1000, 1000),
+			ST_MakeEnvelope(0, 0, 1000, 1000)::BOX_2D,
 			4096,
 			256,
 			true
